@@ -142,7 +142,6 @@ def write_script(h, Tmax, t_end, cool_time, species, t_step, T0=T0):
             '#Lignin species: %s\n\n'
             % (T0, Tmax, h, t_end, cool_time, t_step, species)]
 
-    code.append('chmod 644 %s\n' % (sh_file.split('/')[2]))
     code.append('mkdir model_runs/%s\n' % directory_name)
     code.append('cd model_runs/%s\n' % directory_name)
     code.append('python ~/ligpy/ligpy/ligpy.py %s %s %s %s %s %s %s %s %s '
