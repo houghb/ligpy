@@ -107,7 +107,7 @@ def define_initial_composition(compositionlist, species):
 
     """
     for line in open(compositionlist, 'rb').readlines():
-        if line.split('\t')[0] == species:
+        if line.split(',')[0] == species:
             # Initial compositions [mole fraction]
             pligc_mol = float(line.split('\t')[1])
             pligh_mol = float(line.split('\t')[2])
