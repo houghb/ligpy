@@ -21,7 +21,7 @@ LH_H = 29
 LH_O = 9
 
 
-def get_equiv_comp(species, filewrite=True):
+def get_equiv_comp(species, datadir, filewrite=True):
     """
     Function that takes the name of a species of lignin and calculates
     the equivalent composition (mole fractions of LIGC, LIGH, LIGO) based
@@ -34,6 +34,9 @@ def get_equiv_comp(species, filewrite=True):
     species   : str
                 a string corresponding to a species name in the file
                 `elementalanalysis.dat`
+    datadir   : str
+                absolute path to the data directory where compositionlist
+                should be saved
     filewrite : bool, optional
                 a boolean indicating whether this function is being
                 called in order to write the equivalent compositions
@@ -56,7 +59,7 @@ def get_equiv_comp(species, filewrite=True):
                       [LC_H*M_H, LO_H*M_H, LH_H*M_H],
                       [LC_O*M_O, LO_O*M_O, LH_O*M_O]])
 
-    with open('data/elementalanalysis.dat', 'r') as elemental:
+    with open('%s/elementalanalysis.dat' % datadir, 'rb') as elemental:
         names = []
         for line in elemental.readlines():
             names.append(line.split(' ')[0])
@@ -85,10 +88,16 @@ def get_equiv_comp(species, filewrite=True):
     return ligc, ligh, ligo
 
 
-def get_species_list():
+def get_species_list(datadir):
     """
     Function that returns a list of all the species of lignin that have
     elemental analyses defined in the file `elementalanalysis.dat`.
+
+    Parameters
+    ----------
+    datadir : str
+              absolute path to the data directory where compositionlist
+              should be saved
 
     Returns
     --------
@@ -96,7 +105,7 @@ def get_species_list():
               list of strings for all the species in `elementalanalysis.dat`
     """
     species = []
-    with open('data/elementalanalysis.dat', 'r') as elemental:
+    with open('%s/elementalanalysis.dat' % datadir, 'rb') as elemental:
         for line in elemental.readlines():
             if line[0] == '#':
                 continue
@@ -105,7 +114,7 @@ def get_species_list():
     return species
 
 
-def write_compositionlist():
+def write_compositionlist(datadir):
     """
     Write (or overwrite) a file, `compositionlist.dat`, that contains
     the equivalent compositions (mole fractions of LIGC, LIGH, LIGO) of
@@ -124,14 +133,16 @@ def write_compositionlist():
 
     Parameters
     -----------
-    None
+    datadir : str
+              absolute path to the data directory where compositionlist
+              should be saved
 
     Returns
     --------
     None
     """
     # Initialize the file and/or overwrite old versions
-    with open('data/compositionlist.dat', 'wb') as initialize:
+    with open('%s/compositionlist.dat' % datadir, 'wb') as initialize:
         initialize.write('# Initial compositions of lignin species.\n'
                          '# .\n'
                          '# List generated from the entries in '
@@ -147,9 +158,10 @@ def write_compositionlist():
     body = []
     species = get_species_list()
     _ = [body.append(entry + ',' +
-                     str(get_equiv_comp(entry)[0]) + ',' +
-                     str(get_equiv_comp(entry)[1]) + ',' +
-                     str(get_equiv_comp(entry)[2]) + '\n') for entry in species]
+                     str(get_equiv_comp(entry, datadir)[0]) + ',' +
+                     str(get_equiv_comp(entry, datadir)[1]) + ',' +
+                     str(get_equiv_comp(entry, datadir)[2]) + '\n')
+         for entry in species]
 
     # Check for negative equivalent composition values and correct them
     for i, line in enumerate(body):
@@ -176,5 +188,5 @@ def write_compositionlist():
                            .replace(line.split(',')[j + 1], j_value))
                 print 'Corrected entry will read: ', body[i]
 
-    with open('data/compositionlist.dat', 'ab') as writer:
+    with open('%s/compositionlist.dat' % datadir, 'ab') as writer:
         writer.writelines(body)

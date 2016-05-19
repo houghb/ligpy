@@ -21,8 +21,15 @@ import ddasac_utils as ddasac
 script_start_time = time.time()
 script_start_time_human = time.asctime()
 
+# These are the files and paths that will be referenced in this program:
+file_completereactionlist, file_completerateconstantlist, file_compositionlist\
+    = utils.set_paths()
+working_directory = 'results_dir'
+if not os.path.exists(working_directory):
+    os.makedirs(working_directory)
+
 # Make sure the compositionlist is up to date
-write_compositionlist()
+write_compositionlist(file_compositionlist.split('compositionlist')[0])
 
 # Read command line arguments, defined as follows:
 # end_time = end time in seconds (excludes cool down time)
@@ -61,13 +68,6 @@ print('\nProgram started %s with arguments:\n'
        % (script_start_time_human, end_time, output_time_step, initial_T,
           heat_rate, maximum_T, absolute_tolerance, relative_tolerance,
           plant))
-
-# These are the files and paths that will be referenced in this program:
-file_completereactionlist, file_completerateconstantlist, file_compositionlist\
-    = utils.set_paths()
-working_directory = 'results_dir'
-if not os.path.exists(working_directory):
-    os.makedirs(working_directory)
 
 # Get lists of all the species in the kinetic scheme and their indices
 specieslist = utils.get_specieslist(file_completereactionlist)
