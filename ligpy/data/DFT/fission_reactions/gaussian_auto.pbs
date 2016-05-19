@@ -1,0 +1,17 @@
+#!/bin/bash 
+#PBS -N Rad3.com
+#PBS -l nodes=1:ppn=8,feature=8\core
+#PBS -l walltime=24:0:0
+#PBS -j oe
+
+cd $PBS_O_WORKDIR
+
+export g09root=/gscratch/pfaendtner/codes/G09
+export GAUSS_SCRDIR=$PBS_O_WORKDIR
+. $g09root/g09/bsd/g09.profile
+
+#run gaussian
+
+g09 Rad3.com
+
+exit 0

@@ -1,0 +1,15 @@
+Warning: omp_set_num_threads (16) greater than available cpus (8)
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000000492, rsp 00007fff3da600d8, rbp 00007fff3da606b0
+   rsi 000000000000000b, rdi 0000000000000492, r8  00002b86b59c8b20
+   r9  0000000000000000, r10 00007fff3da5fe60, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff3da606f8
+   r15 0000000000000000
+  0  0x2b86b545d907
+  1  0x49d0c5  lnk1e_ + 0x225
+  2  0x410230  gparse_ + 0x45d0
+  3  0x406001  eroute_ + 0x491
+  4  0x403af9  link1_ + 0x4f9
+  5  0x4035dc  MAIN_ + 0x6c
+  6  0x403558

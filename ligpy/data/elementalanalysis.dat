@@ -1,0 +1,54 @@
+# This file contains a list of the elemental analysis results (mass fraction)
+# for lignins of various species. Users should manually add entries to this 
+# file as needed.
+# .
+# When elements other than C, H, O are present in small amounts (i.e. N, S)
+# their mass fractions are added to Oxygen as was done in Faravelli et al.'s
+# 2010 paper.
+# .
+# Lines are organized as Species_name<space>C<space>H<space>O
+# .
+# Lignins from Table 1 of 2010 Faravelli et al. Biomass and Bioenergy paper.
+Pseudotsuga_menziesii 0.648 0.058 0.294
+Picea_sylvestris 0.640 0.060 0.300
+Thuja_plicata 0.638 0.061 0.301
+Picea_mariana 0.637 0.063 0.300
+Larix_occidentalis 0.637 0.061 0.302
+Tsuga_heterophylla 0.634 0.063 0.303
+Picea_abies 0.634 0.060 0.306
+Arachis_hypogaea 0.631 0.057 0.312
+Metasequoia_glyptostroboides 0.629 0.059 0.312
+Dalbergia_melanoxylon 0.627 0.059 0.312
+Dalbergia_granadillo 0.625 0.060 0.315
+Pinus_ponderosa 0.625 0.060 0.315
+Millettia_laurentii 0.623 0.057 0.320
+Afzelia_sp 0.623 0.056 0.321
+Tieghemella_heckelii 0.611 0.058 0.331
+Manilcara_sp 0.607 0.059 0.334
+Entandrophragma_cylindricum 0.606 0.058 0.336
+Acer_macrophyllum 0.604 0.057 0.339
+Fagus_sylvatica 0.603 0.063 0.334
+Juglans_regia_L 0.604 0.059 0.337
+Miscanthus_sinensis 0.602 0.058 0.340
+Olea_sp 0.601 0.059 0.340
+Populus_tremuloides 0.600 0.061 0.339
+Caesaei_paecox 0.600 0.059 0.341
+Prunus_serotina 0.597 0.059 0.344
+Eucalyptus_regans 0.592 0.063 0.345
+Liriodendron_tulipifera 0.584 0.058 0.358
+Liquidambar_styraciflua 0.576 0.056 0.368
+# Lignins from 2010 Jiang Nowakowski Bridgewater paper, Effect of the temperature
+# on the compositions of lignin pyrolysis products
+Alcell_lignin 0.6652 0.0594 0.2754
+Asian_lignin 0.6232 0.0591 0.3177
+# Lignins from 2010 Fast Pyrolysis of Lignins in Bioresources (these are both types
+# of craft lignin)
+IndulinAT 0.6446 0.0542 0.3012
+Lignoboost 0.6735 0.0557 0.2708
+# Lignins from 2010 Bridgewater international collaboration
+ALM 0.62846 0.0602 0.31134
+ETEK 58.0 5.9 36.1
+# Lignin from Patwardhan & Brown, 2011,ChemSusChem paper
+Cornstover_lignin 0.61748 0.061976 0.320544
+# Average value for softwood craft lignin from several papers
+Kraft 0.6395 0.0591 0.3014 
