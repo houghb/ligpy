@@ -123,7 +123,7 @@ def write_script(h, Tmax, t_end, cool_time, species, t_step, T0=T0):
     --------
     None
     """
-    sh_file = ('../../ligpy_%s-%sK_to_%sK-%sCperMin-%send-%scool.sh'
+    sh_file = ('~/ligpy_%s-%sK_to_%sK-%sCperMin-%send-%scool.sh'
                % (species, T0+273, Tmax+273, h, t_end, cool_time))
     # the name of the directory where results are stored
     directory_name = ('%s-max%sK-%sCperMin-%send-%scool' %
