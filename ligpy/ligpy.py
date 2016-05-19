@@ -91,7 +91,7 @@ ddasac.run_ddasac(file_completereactionlist, kmatrix, working_directory,
                   maximum_T, output_time_step, cool_time)
 
 script_running_time = time.time() - script_start_time
-print('This script took %s seconds to run' % script_running_time)
+print('This program took %s seconds to run' % script_running_time)
 
 
 
