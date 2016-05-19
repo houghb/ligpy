@@ -8,6 +8,8 @@ the University of Washington).
 """
 from subprocess import call
 
+import numpy as np
+
 from ligpy_utils import set_paths, build_k_matrix
 from constants import COOL_RATE
 
@@ -162,7 +164,7 @@ def write_ddat(y0, specieslist, num_reactions, num_net_reactions, atol,
 
 
 def run_ddasac(reactionlist, kmatrix, working_dir, y0, specieslist, atol,
-               rtol, T0, h, t_end, max_T, t_step):
+               rtol, T0, h, t_end, max_T, t_step, cool_time):
     """
     Run the DDASAC ODE solver on the model.  Output from the solver is saved
     in the working directory.
@@ -239,7 +241,7 @@ def run_ddasac(reactionlist, kmatrix, working_dir, y0, specieslist, atol,
                 for j, concentration in enumerate(line.split('\t')[1:-2]):
                     y_ddasac[i-1, j] = concentration
 
-        new_end_time = end_time - ramp_time
+        new_end_time = t_end - ramp_time
         write_ddat(y_ddasac[-1, :], specieslist, num_reactions, net_rxns,
                    atol, rtol, max_T, 0, new_end_time, max_T, t_step,
                    working_dir)

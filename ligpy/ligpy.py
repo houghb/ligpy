@@ -88,7 +88,7 @@ y0_ddasac[:3] = [PLIGC_0, PLIGH_0, PLIGO_0]
 ddasac.run_ddasac(file_completereactionlist, kmatrix, working_directory,
                   y0_ddasac, specieslist, absolute_tolerance,
                   relative_tolerance, initial_T, heat_rate, end_time,
-                  maximum_T, output_time_step)
+                  maximum_T, output_time_step, cool_time)
 
 script_running_time = time.time() - script_start_time
 print('This script took %s seconds to run' % script_running_time)

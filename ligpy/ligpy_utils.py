@@ -108,20 +108,19 @@ def define_initial_composition(compositionlist, species):
     """
     for line in open(compositionlist, 'rb').readlines():
         if line.split(',')[0] == species:
-            # Initial compositions [mole fraction]
-            pligc_mol = float(line.split('\t')[1])
-            pligh_mol = float(line.split('\t')[2])
-            pligo_mol = float(line.split('\t')[3])
+	    # Initial compositions [mole fraction]
+            pligc_mol = float(line.split(',')[1])
+            pligh_mol = float(line.split(',')[2])
+            pligo_mol = float(line.split(',')[3])
             # The weighted average molar mass of mixture [kg/mol]
-            weighted_m = (301*PLIGC_mol + 423*PLIGH_mol + 437*PLIGO_mol)/1000
+            weighted_m = (301*pligc_mol + 423*pligh_mol + 437*pligo_mol)/1000
             # the density of the condensed phase [kg/L]
             density = 0.75
             # Initial compositions [mol/L]
             pligc_0 = density/weighted_m * pligc_mol
             pligh_0 = density/weighted_m * pligh_mol
             pligo_0 = density/weighted_m * pligo_mol
-        else:
-            raise ValueError('The species you have specified is not defined.')
+	    break
     return pligc_0, pligh_0, pligo_0
 
 
