@@ -156,7 +156,7 @@ def write_compositionlist(datadir):
                          'LIGO\n')
 
     body = []
-    species = get_species_list()
+    species = get_species_list(datadir)
     _ = [body.append(entry + ',' +
                      str(get_equiv_comp(entry, datadir)[0]) + ',' +
                      str(get_equiv_comp(entry, datadir)[1]) + ',' +

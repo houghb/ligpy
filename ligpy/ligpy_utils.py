@@ -20,7 +20,7 @@ def set_paths():
     compositionlist_path  : str
                             path to the file `compositionlist.dat`
     """
-    module_dir = os.path.abspath(__file__).split('ligpy_utils')[0])
+    module_dir = os.path.abspath(__file__).split('ligpy_utils')[0]
     reactionlist_path = module_dir + 'data/complete_reaction_list.dat'
     rateconstantlist_path = module_dir + 'data/complete_rateconstant_list.dat'
     compositionlist_path = module_dir + 'data/compositionlist.dat'
