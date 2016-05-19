@@ -1,8 +1,8 @@
 """
 Build and solve the ligpy kinetic model.  This model simulates the
 pyrolysis of lignin in a perfectly mixed batch reactor.  For complete model
-details see the journal article linked in the README at <GITHUB PAGE
-ADDRESS>.
+details see the journal article linked in the README at
+https://github.com/houghb/ligpy.
 
 Please read the documentation for instructions on using this module.
 """
