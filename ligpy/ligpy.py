@@ -12,6 +12,7 @@ import time
 import sys
 
 import numpy as np
+import cPickle as pickle
 
 from equivalent_compositions import write_compositionlist
 import ligpy_utils as utils
@@ -68,6 +69,12 @@ print('\nProgram started %s with arguments:\n'
        % (script_start_time_human, end_time, output_time_step, initial_T,
           heat_rate, maximum_T, absolute_tolerance, relative_tolerance,
           plant))
+
+# pickle the arguments used for this program to reference during analysis
+prog_params = [end_time, output_time_step, initial_T, heat_rate, maximum_T,
+               absolute_tolerance, relative_tolerance, plant, cool_time]
+with open('%s/prog_params.pkl' % working_directory, 'wb') as pkl:
+    pickle.dump(prog_params, pkl)
 
 # Get lists of all the species in the kinetic scheme and their indices
 specieslist = utils.get_specieslist(file_completereactionlist)
