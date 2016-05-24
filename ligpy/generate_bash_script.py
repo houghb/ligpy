@@ -7,6 +7,7 @@ appropriate for the environment you want to solve the model in.
 """
 
 import equivalent_compositions as ec
+from ligpy_utils import set_paths
 from constants import COOL_RATE, ABSOLUTE_TOLERANCE, RELATIVE_TOLERANCE
 
 # initial temperature in Celsius
@@ -47,7 +48,7 @@ def choose_params():
     elif t_unit == 'ms':
         h = h * 1000 * 60    # convert to C/min
     else:
-        print 'Please try again with min, s, or ms'
+        raise ValueError('Please try again with min, s, or ms')
 
     print '----- Heating rate is %s C/min\n' % h
 
@@ -74,14 +75,15 @@ def choose_params():
     species = raw_input('Enter the name of the species you want to model.\n'
                         'If you need to see a list of available species '
                         'type `list`. ')
+    datadir = set_paths()[2].split('compositionlist')[0]
     if 'list' in species:
-        for spec in ec.get_species_list():
+	for spec in ec.get_species_list(datadir):
             print spec
         species = raw_input('\nPlease enter a species from the list: ')
 
-    while species not in ec.get_species_list():
+    while species not in ec.get_species_list(datadir):
         print '\nThat is not in the list, here are the choices: '
-        for spec in ec.get_species_list():
+        for spec in ec.get_species_list(datadir):
             print spec
         species = raw_input('\nWhich species? ')
 
