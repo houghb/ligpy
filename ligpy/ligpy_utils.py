@@ -108,7 +108,7 @@ def define_initial_composition(compositionlist, species):
     """
     for line in open(compositionlist, 'rb').readlines():
         if line.split(',')[0] == species:
-	    # Initial compositions [mole fraction]
+            # Initial compositions [mole fraction]
             pligc_mol = float(line.split(',')[1])
             pligh_mol = float(line.split(',')[2])
             pligo_mol = float(line.split(',')[3])
@@ -120,7 +120,7 @@ def define_initial_composition(compositionlist, species):
             pligc_0 = density/weighted_m * pligc_mol
             pligh_0 = density/weighted_m * pligh_mol
             pligo_0 = density/weighted_m * pligo_mol
-	    break
+            break
     return pligc_0, pligh_0, pligo_0
 
 
