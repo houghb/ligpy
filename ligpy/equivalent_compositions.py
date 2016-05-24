@@ -23,7 +23,7 @@ LH_O = 9
 
 def get_equiv_comp(species, datadir, filewrite=True):
     """
-    Function that takes the name of a species of lignin and calculates
+    Takes the name of a species of lignin and calculates
     the equivalent composition (mole fractions of LIGC, LIGH, LIGO) based
     on the elemental analysis of that lignin species.  Equivalent composition
     is determined based on a linear relationship assuming conservation
@@ -35,7 +35,7 @@ def get_equiv_comp(species, datadir, filewrite=True):
                 a string corresponding to a species name in the file
                 `elementalanalysis.dat`
     datadir   : str
-                absolute path to the data directory where compositionlist
+                absolute path to the data directory where `compositionlist.dat`
                 should be saved
     filewrite : bool, optional
                 a boolean indicating whether this function is being
