@@ -1,0 +1,44 @@
+/home/houghb/DDASAC_files_needed/mech2modBH: total number of species = 93
+/home/houghb/DDASAC_files_needed/mech2modBH: total number of reactions = 406
+/home/houghb/DDASAC_files_needed/mech2modBH: total number of unique reactions = 406
+/home/houghb/DDASAC_files_needed/mech2modBH: total number of reaction pairs = 45
+/home/houghb/DDASAC_files_needed/mech2modBH: total number of irreversible reactions = 316
+/home/houghb/DDASAC_files_needed/mech2modBH: script cpu time = 0.22 sec
+/home/houghb/DDASAC_files_needed/mech2modBH: total cpu time = 0.25 sec
+cd . ; gcc  -g  -I/scratch/jpfaendt/software/parest/ddasac/software/include  -O2  -c model.c
+cd . ; gcc  -g  -I/scratch/jpfaendt/software/parest/ddasac/software/include  -O2  -c jacobian.c
+cd . ; gcc  -g  -I/scratch/jpfaendt/software/parest/ddasac/software/include  -O2  -c bsub.c
+gcc  -g  -I/scratch/jpfaendt/software/parest/ddasac/software/include  -O2  -o parest ./model.o jacobian.o bsub.o -L/scratch/jpfaendt/software/parest/ddasac/software -L/scratch/jpfaendt/software/parest/ddasac/software/myUtil -L/scratch/jpfaendt/software/parest/ddasac/software/lib  -lm -lliqparest -ldassl -lgregpack -lgfortran -lUtil  
+Negative value encountered:  Picea_mariana,0.52231922638,0.510296775298,-0.0326160016778
+Corrected entry will read:  Picea_mariana,0.506011225541,0.493988774459,0.0
+
+Negative value encountered:  Tsuga_heterophylla,0.492215238748,0.519882462473,-0.012097701221
+Corrected entry will read:  Tsuga_heterophylla,0.486166388138,0.513833611862,0.0
+
+Negative value encountered:  Eucalyptus_regans,-0.00607406784478,0.678547336848,0.327526730997
+Corrected entry will read:  Eucalyptus_regans,0.0,0.675510302926,0.324489697074
+
+Negative value encountered:  Alcell_lignin,0.858787063452,0.17919414507,-0.0379812085216
+Corrected entry will read:  Alcell_lignin,0.839796459191,0.160203540809,0.0
+
+Negative value encountered:  IndulinAT,0.812732488279,-0.131771715044,0.319039226764
+Corrected entry will read:  IndulinAT,0.746846630757,0.0,0.253153369243
+
+Negative value encountered:  Lignoboost,0.993638704714,-0.065770945284,0.0721322405698
+Corrected entry will read:  Lignoboost,0.960753232072,0.0,0.039246767928
+
+Negative value encountered:  ETEK,-0.0038464180188,0.345556441373,0.658289976646
+Corrected entry will read:  ETEK,0.0,0.343633232364,0.656366767636
+
+
+Program started Tue May 24 14:38:46 2016 with arguments:
+end time (s) = 2760.0
+output time step (s) = 1.0
+initial temperature (K) = 298.15
+heating rate (K/min) = 15.0
+maximum temperature (K) = 973.15
+absolute tolerance = 1e-11
+relative tolerance = 1e-09
+plant name = Pinus_ponderosa
+
+This program took 6.60325598717 seconds to run
