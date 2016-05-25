@@ -402,20 +402,25 @@ def write_rates_and_odes(filename, rates, odes):
 # These are some functions for checking the integrity of some model
 # components, but they are not used except for exploratory or verification
 # purposes
-def check_species_in_MW():
+def check_species_in_MW(specieslist=None):
     """
     Check to make sure that everything in the specieslist is in the MW
     dictionary from `constants.py`.
 
     Parameters
     ----------
-    None
+    specieslist : list, optional
+                  a list of species to check against.  If no list is specified
+                  then the function get_specieslist() will be used to generate
+                  the default list
 
     Returns
     --------
     None
     """
-    specieslist = get_specieslist(set_paths()[0])
+    if specieslist == None:
+        specieslist = get_specieslist(set_paths()[0])
+
     for item in MW.keys():
         if item in specieslist:
             print '%s is in specieslist' % ('{: <20}'.format(item))
