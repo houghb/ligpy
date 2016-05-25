@@ -414,7 +414,8 @@ def generate_report(speciesindices, specieslist, y, m, t, which_result):
 
     Returns
     -------
-    None
+    t_index : int
+              the index of `t` where this analysis was performed
     """
     (ea0, ea, ea0_molpercent, ea_molpercent, ea0_wtpercent, ea_wtpercent, choice,
      t_index) = tar_elem_analysis(speciesindices, y, t)
@@ -523,3 +524,5 @@ def generate_report(speciesindices, specieslist, y, m, t, which_result):
         print11 = '%s\t%s' % ('{0: <8}'.format(species),
                               '{0: <18}'.format(final_mass_fracs[species]))
         print print11
+
+    return t_index
