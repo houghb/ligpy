@@ -11,11 +11,14 @@ COOL_RATE = -13
 ABSOLUTE_TOLERANCE = 1E-11
 RELATIVE_TOLERANCE = 1E-9
 
-# MW Dictionary values are: (1)MW...(2)phase (g,s,lt,t,char,H20,CO,CO2)...
+# MW Dictionary values are:
+# [0] MW
+# [1] phase (g,s,lt,t,char,H20,CO,CO2)
 # The rest of the columns are information that is only needed for tar
-# components, so it may be blank in other phases
-# (3)phenolic family (phenol/syringol)...(4)number of [C,H,O] in the molecule.
-# (5) number of each type of C-bond/functional group in each molecule
+# components, so it may be blank in species of other phases
+# [2] phenolic family (phenol/syringol)
+# [3] number of [C,H,O] in the molecule
+# [4] number of each type of C-bond/functional group in each molecule
 # [carbonyl, aromatic C-O, aromatic C-C, aromatic C-H, aliphatic C-O,
 # Methoxyl-aromatic, aliphatic C-C]
 # .
