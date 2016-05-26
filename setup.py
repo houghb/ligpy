@@ -1,4 +1,4 @@
-try:                                                                                             
+try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
@@ -20,9 +20,15 @@ opts = dict(name='ligpy',
                                     '15.0CperMin-2760.0end-0cool/*.*',
                                     'sample_results/Pinus_ponderosa-max973K-'
                                     '15.0CperMin-2760.0end-0cool/results_dir/'
-                                    '*.*']},
+                                    '*.*',
+                                    'sample_results/Pseudotsuga_menziesii-'
+                                    'max773K-162.0CperMin-1965.92592593end-'
+                                    '0cool/*.*',
+                                    'sample_results/Pseudotsuga_menziesii-'
+                                    'max773K-162.0CperMin-1965.92592593end-'
+                                    '0cool/results_dir/*.*']},
             include_package_data=True
-            )   
+            )
 
 
 if __name__ == '__main__':

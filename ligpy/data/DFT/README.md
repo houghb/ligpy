@@ -1,0 +1,1 @@
+The contents of this folder are the input and output files from our DFT analysis.  This DFT analysis was carried out to get kinetic parameters for reactions we added to the kinetic scheme.  See our journal article for complete details.
