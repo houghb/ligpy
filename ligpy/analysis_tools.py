@@ -271,7 +271,7 @@ def C_fun_gen(fractions, speciesindices, y, time):
     total carbon.
 
     Parameters
-    -----------
+    ----------
     fractions      : list
                      The lumped phases that you want to include (as specified
                      in MW['species'][1], options are any subset of

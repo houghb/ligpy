@@ -20,7 +20,7 @@ def choose_params():
     run the ligpy model.
 
     Returns
-    --------
+    -------
     h         : float
                 the heating rate in C/min
     Tmax      : float
@@ -77,7 +77,7 @@ def choose_params():
                         'type `list`. ')
     datadir = set_paths()[2].split('compositionlist')[0]
     if 'list' in species:
-	for spec in ec.get_species_list(datadir):
+    for spec in ec.get_species_list(datadir):
             print spec
         species = raw_input('\nPlease enter a species from the list: ')
 
@@ -105,7 +105,7 @@ def write_script(h, Tmax, t_end, cool_time, species, t_step, T0=T0):
     write your own function to replace this one.
 
     Parameters
-    -----------
+    ----------
     h         : float
                 the heating rate in C/min
     Tmax      : float
@@ -122,7 +122,7 @@ def write_script(h, Tmax, t_end, cool_time, species, t_step, T0=T0):
                 the initial temperature in C (default 25C)
 
     Returns
-    --------
+    -------
     None
     """
     sh_file = ('/home/houghb/ligpy_%s-%sK_to_%sK-%sCperMin-%send-%scool.sh'

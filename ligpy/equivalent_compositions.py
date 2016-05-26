@@ -30,7 +30,7 @@ def get_equiv_comp(species, datadir, filewrite=True):
     of mass.
 
     Parameters
-    -----------
+    ----------
     species   : str
                 a string corresponding to a species name in the file
                 `elementalanalysis.dat`
@@ -38,21 +38,20 @@ def get_equiv_comp(species, datadir, filewrite=True):
                 absolute path to the data directory where `compositionlist.dat`
                 should be saved
     filewrite : bool, optional
-                a boolean indicating whether this function is being
-                called in order to write the equivalent compositions
-                to a file (=True).  If False, information on the
-                equivalent composition conversion is printed in addition
-                to being returned by the function
+                a boolean indicating whether this function is being called
+                in order to write the equivalent compositions to a file
+                (=True).  If False, information on the equivalent
+                composition conversion is printed in addition to being
+                returned by the function
 
     Returns
-    --------
-    LIGC : float
-           the mole fraction of LIGC
-    LIGH : float
-           the mole fraction of LIGH
-    LIGO : float
-           the mole fraction of LIGO
-
+    -------
+    LIGC     : float
+               the mole fraction of LIGC
+    LIGH     : float
+               the mole fraction of LIGH
+    LIGO     : float
+               the mole fraction of LIGO
     """
     # g [element]/mol [LIG*]
     a_mat = np.array([[LC_C*M_C, LO_C*M_C, LH_C*M_C],
@@ -100,7 +99,7 @@ def get_species_list(datadir):
               should be saved
 
     Returns
-    --------
+    -------
     species : list
               list of strings for all the species in `elementalanalysis.dat`
     """
@@ -132,13 +131,13 @@ def write_compositionlist(datadir):
     your `elementalanalysis.dat` file and re-run this function.
 
     Parameters
-    -----------
+    ----------
     datadir : str
               absolute path to the data directory where compositionlist
               should be saved
 
     Returns
-    --------
+    -------
     None
     """
     # Initialize the file and/or overwrite old versions
