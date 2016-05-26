@@ -18,18 +18,26 @@ class TestGetEquivComp(unittest.TestCase):
     def test_returns_expected_values(self):
         """Does get_equiv_comp() return the expected values?"""
         datadir = set_paths()[2].split('compositionlist')[0]
-        self.assertEqual(get_equiv_comp('Picea_mariana', datadir),
-                         (0.52231922638025652, 0.51029677529754947,
-                          -0.032616001677805921))
-        self.assertEqual(get_equiv_comp('Populus_tremuloides', datadir),
-                         (0.17791175297196676, 0.46178664816315829,
-                          0.36030159886487506))
-        self.assertEqual(get_equiv_comp('Lignoboost', datadir),
-                         (0.99363870471413362, -0.065770945283958729,
-                          0.072132240569825243))
-        self.assertEqual(get_equiv_comp('Acer_macrophyllum', datadir),
-                         (0.36258735738441195, 0.11845586420211719,
-                          0.51895677841347088))
+        tuple1 = get_equiv_comp('Picea_mariana', datadir)
+        tuple2 = (0.52231922638025652, 0.51029677529754947,
+                  -0.032616001677805921)
+        for x in [0, 1, 2]:
+            self.assertAlmostEqual(tuple1[x], tuple2[x], places=14)
+        tuple1 = get_equiv_comp('Populus_tremuloides', datadir)
+        tuple2 = (0.17791175297196676, 0.46178664816315829,
+                  0.36030159886487506)
+        for x in [0, 1, 2]:
+            self.assertAlmostEqual(tuple1[x], tuple2[x], places=14)
+        tuple1 = get_equiv_comp('Lignoboost', datadir)
+        tuple2 = (0.99363870471413362, -0.065770945283958729,
+                  0.072132240569825243)
+        for x in [0, 1, 2]:
+            self.assertAlmostEqual(tuple1[x], tuple2[x], places=14)
+        tuple1 = get_equiv_comp('Acer_macrophyllum', datadir)
+        tuple2 = (0.36258735738441195, 0.11845586420211719,
+                  0.51895677841347088)
+        for x in [0, 1, 2]:
+            self.assertAlmostEqual(tuple1[x], tuple2[x], places=14)
 
 
 class TestGetSpeciesList(unittest.TestCase):
