@@ -9,7 +9,6 @@ are the versions used when developing ligpy which are known to work.
 
 * Python 2.7
 * NumPy 1.10.4
-* cPickle 1.71
 * DDASAC (a stiff ODE solver, not open source)
 
 We used DDASAC as our ODE solver for ligpy because we found it performed the
