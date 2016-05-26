@@ -1,2 +1,2 @@
 numpy==1.10.4
-cPickle==1.71
+cPickle
