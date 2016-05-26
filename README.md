@@ -18,6 +18,7 @@ Python version 2.7 (https://www.python.org)
 
 **Python packages needed:**  
 NumPy (version 1.10.4 was used but any updated version should be compatible)
+cPickle (1.71)
 
 The ODE solver that we used for our research is a modified version of DDASAC that is unfortunately not open source.  We chose this solver because it performed the best on the stiff set of ODEs in this model, but future users can modify the code (by replacing our `ddasac_utils.py` module) to use other solvers, such as those in the python package scipy.integrate.
 

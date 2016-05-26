@@ -15,7 +15,7 @@ opts = dict(name='ligpy',
             package_data={'ligpy': ['data/*.*', 'data/DFT/*.*',
                                     'data/DFT/fission_reactions/*.*',
                                     'data/DFT/initiation_reactions/*.*',
-                                    'sample_results/*.*',
+                                    'sample_results/README.md',
                                     'sample_results/Pinus_ponderosa-max973K-'
                                     '15.0CperMin-2760.0end-0cool/*.*',
                                     'sample_results/Pinus_ponderosa-max973K-'
