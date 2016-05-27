@@ -8,7 +8,8 @@ Biomass valorization through thermochemical conversion of lignocellulosic feedst
 Please read the documentation for instructions on using ligpy.
 
 **ligpy documentation:** [![Documentation Status](https://readthedocs.org/projects/ligpy/badge/?version=latest)](http://ligpy.readthedocs.io/en/latest/?badge=latest)  
-**Cite ligpy:**
+**Cite ligpy:** [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.53202.svg)](http://dx.doi.org/10.5281/zenodo.53202)
+
 
 -------
 ### Software dependencies and license information

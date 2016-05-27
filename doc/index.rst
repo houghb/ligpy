@@ -32,6 +32,11 @@ optimization** (a link to the paper will be added when it is published).
 
 To start using ligpy see the "Installing ligpy" and "Getting started" pages below.
 
+To cite ligpy, follow the badge below:
+
+.. image:: https://zenodo.org/badge/doi/10.5281/zenodo.53202.svg
+   :target: http://dx.doi.org/10.5281/zenodo.53202
+
 
 Contents
 =========
