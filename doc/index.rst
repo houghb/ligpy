@@ -26,11 +26,11 @@ fast pyrolysis are available, however,
 recently developed experimental techniques for kinetically-controlled fast
 pyrolysis of biomass have yet to be applied to lignin.
 
-ligpy is a package developed to solve the kinetic model we describe in our
+ligpy is the package developed to solve the kinetic model we describe in our
 2016 paper, **Detailed kinetic modeling of lignin pyrolysis for process
 optimization** (a link to the paper will be added when it is published).
 
-To start using ligpy see the "Getting started" page below.
+To start using ligpy see the "Installing ligpy" and "Getting started" pages below.
 
 
 Contents

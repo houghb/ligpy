@@ -8,22 +8,15 @@ for reference while following these steps.
 
   .. image:: ligpy_diagram.svg
 
-1. Make sure that the elemental analysis of the type of lignin you would like
-to simulate is specified in the file ``elementalanalysis.dat``.  This file is
-located in the ``ligpy/data/`` folder and it contains instructions on how to
-format new entries.
+1. Make sure that the elemental analysis of the type of lignin you would like to simulate is specified in the file ``elementalanalysis.dat``.  This file is located in the ``ligpy/data/`` folder and it contains instructions on how to format new entries.
 
 2. Create your own version of ``generate_bash_script.py`` to write the
 command line function call to ``ligpy.py``.  Alternatively you can run ligpy
 directly from the command line with ``python ligpy.py <arguments>``.
 
-  * Future users will need to modify ``ddasac_utils.py``, and while doing so
-  they can specify their own directory structure for saving the results; the
-  existing code requires a specific directory structure to already exist on
-  cmole at the University of Washington.
+Note: Future users will need to modify ``ddasac_utils.py``, and while doing so they can specify their own directory structure for saving the results; the existing code requires a specific directory structure to already exist on cmole at the University of Washington.
 
-3. ``ligpy.py`` will handle calls to all the necessary modules to complete the
-simulation and save the results.
+3. Run your script. ``ligpy.py`` will handle calls to all the necessary modules to complete the simulation and save the results.
 
 4. Explore your results.  If you have formatted them in the same way that the
 sample results (in ``ligpy/sample_results/``) are formatted then only minor
