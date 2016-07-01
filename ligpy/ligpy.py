@@ -78,7 +78,6 @@ with open('%s/prog_params.pkl' % working_directory, 'wb') as pkl:
 
 # Get lists of all the species in the kinetic scheme and their indices
 specieslist = utils.get_specieslist(file_completereactionlist)
-speciesindices, indices_to_species = utils.get_speciesindices(specieslist)
 # Get kmatrix
 kmatrix = utils.build_k_matrix(file_completerateconstantlist)
 
